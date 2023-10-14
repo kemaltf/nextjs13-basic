@@ -4,7 +4,7 @@ type Product = {
   price: number;
 };
 async function getProducts() {
-  const res = await fetch('http://localhost:5000/products', { next: { revalidate: 10 } });
+  const res = await fetch('http://localhost:5000/products', { cache: 'no-store' });
   return res.json();
 }
 
