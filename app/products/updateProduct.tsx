@@ -48,7 +48,7 @@ export default function UpdateProduct(product: Product) {
             </div>
             <div className="form-control">
               <label className="label font-bold">Price</label>
-              <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} className="input w-full input-border" placeholder="Price" />
+              <input type="text" value={price} onChange={(e) => setPrice(Number(e.target.value))} className="input w-full input-border" placeholder="Price" />
             </div>
             <div className="modal-action">
               <button type="button" className="btn" onClick={handleChange}>
