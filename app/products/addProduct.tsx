@@ -1,10 +1,11 @@
 'use client';
 import { SyntheticEvent, useState } from 'react';
-
+import { useRouter } from 'next/navigation';
 export default function AddProduct() {
   const [title, setTitle] = useState('');
   const [price, setPrice] = useState('');
   const [modal, setModal] = useState(false);
+  const router = useRouter();
   async function handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
     await fetch('http://localhost:5000/products', {
@@ -17,6 +18,8 @@ export default function AddProduct() {
     });
     setTitle('');
     setPrice('');
+    router.refresh();
+    setModal(false);
   }
   function handleChange() {
     setModal(!modal);
