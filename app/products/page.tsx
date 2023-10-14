@@ -1,3 +1,4 @@
+import AddProduct from './addProduct';
 type Product = {
   id: number;
   title: string;
@@ -12,6 +13,9 @@ export default async function ProductsList() {
   const product: Product[] = await getProducts();
   return (
     <div className="py-10 px-10">
+      <div className="py-2">
+        <AddProduct></AddProduct>
+      </div>
       <table className="table w-full">
         <thead>
           <tr>
