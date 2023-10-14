@@ -1,14 +1,14 @@
 {
   "products": [
     {
-      "title": "Product 1",
-      "price": "200000",
-      "id": 1
+      "title": "Product 3",
+      "price": "2000000",
+      "id": 2
     },
     {
-      "title": "Product 2",
-      "price": "200000",
-      "id": 2
+      "title": "Tes",
+      "price": "1309471342",
+      "id": 3
     }
   ]
 }
